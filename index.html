@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Moneda</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Conversor de Moneda</h1>
+    <div class="form-group">
+      <label for="monto">Monto:</label>
+      <input type="number" id="monto" min="0" step="any">
+    </div>
+    <div class="form-group">
+      <label for="claveFiscal">Clave Fiscal:</label>
+      <input type="text" id="claveFiscal">
+    </div>
+    <div class="form-group">
+      <label for="selectMoneda">Moneda:</label>
+      <select id="selectMoneda">
+        <option value="dolar">Dólar</option>
+        <option value="euro">Euro</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <button onclick="convertirMoneda()">Convertir</button>
+    </div>
+    <div id="resultado"></div>
+  </div>
+
+  <div class="container">
+    <h1>Conversor Histórico de Dólar a Pesos</h1>
+    <div class="form-group">
+      <label for="montoHistorico">Monto en Dólar:</label>
+      <input type="number" id="montoHistorico" min="0" step="any">
+    </div>
+    <div class="form-group">
+      <label for="anioHistorico">Año:</label>
+      <input type="number" id="anioHistorico" min="1990" max="2023">
+    </div>
+    <div class="form-group">
+      <button onclick="convertirDolarAPesosHistorico()">Convertir</button>
+    </div>
+    <div id="resultadoHistorico"></div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
